@@ -501,9 +501,9 @@ Pagina basis
 .basis {
   // background: linear-gradient(to right, #0083B0, #00B4DB);
   // background-color: #F8F8F8;
-  #btn-blue {
-    border: none;
-  }
+  // #btn-blue {
+  //   border: none;
+  // }
 
   .information-extra {
     padding: 20px;
@@ -514,21 +514,22 @@ Pagina basis
 
     #slide-outer {
       padding: 20px;
-      color: white;
+      // color: white;
       background: url('../afbeeldingen/test_home.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       position: relative;
       z-index: 1;
 
-      div {
-        height: 30vh;
+      div:first-child {
+        // height: 30vh;
       }
 
       div p:first-child {
-        border-radius: 0;
-        background: inherit;
         box-shadow: none;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #0083B0;
       }
     }
 
@@ -539,7 +540,7 @@ Pagina basis
             bottom: 0;
             right: 0;
             position: absolute;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(255,255,255,0.8);
             background-size: cover;
             z-index: -1;
           }

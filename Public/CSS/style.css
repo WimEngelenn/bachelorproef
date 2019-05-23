@@ -352,26 +352,22 @@ Pagina voeding
 /*
 Pagina basis
 */
-.basis #btn-blue {
-  border: none; }
 .basis .information-extra {
   padding: 20px; }
 .basis .content-inner {
   padding: 0; }
   .basis .content-inner #slide-outer {
     padding: 20px;
-    color: white;
     background: url("../afbeeldingen/test_home.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1; }
-    .basis .content-inner #slide-outer div {
-      height: 30vh; }
     .basis .content-inner #slide-outer div p:first-child {
-      border-radius: 0;
-      background: inherit;
-      box-shadow: none; }
+      box-shadow: none;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #0083B0; }
   .basis .content-inner #slide-outer:after {
     content: "";
     top: 0;
@@ -379,7 +375,7 @@ Pagina basis
     bottom: 0;
     right: 0;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     background-size: cover;
     z-index: -1; }
 .basis .btn-bottom {
