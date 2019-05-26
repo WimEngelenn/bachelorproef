@@ -1,7 +1,7 @@
 /*
 Kleuren
 */
-/*
+                                                   /*
 Hoofdelementen
 */
 * {
@@ -9,9 +9,10 @@ Hoofdelementen
 
 body {
   max-width: 100%;
+  margin-bottom: calc(10vh + 15px);
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
-  padding-bottom: 10vh; }
+  background: #E9EBF1; }
 
 button {
   font-family: 'Open Sans', sans-serif; }
@@ -23,13 +24,24 @@ main {
 /*
 Titels en tekst
 */
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  color: #333333; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 h1 {
   font-size: 2.5em;
@@ -56,54 +68,49 @@ p {
   line-height: 1.65em; }
 
 a {
-  text-decoration: none;
-  color: black; }
+  text-decoration: none; }
+
+ol,
+ul {
+  list-style-type: none; }
+
+#highlight-text-rood {
+  color: #eb4d4b; }
+
+#highlight-text-blauw {
+  color: #22a6b3; }
+
+#highlight-text-groen {
+  color: #6ab04c; }
 
 /*
-Welkomspagina
+Introductie pagina
 */
-.welkom {
-  padding: 2.5vh 20px;
-  height: 100vh;
-  margin-bottom: 0; }
-  .welkom .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    padding: 0 50px;
-    border: 1px solid #d31027;
-    min-height: 95vh; }
-    .welkom .content .logo {
-      margin: 0 0 50px;
-      text-align: center; }
-      .welkom .content .logo img {
-        max-height: 250px; }
-    .welkom .content h1 {
-      text-align: center; }
-
-#header_intro {
-  height: 10vh;
-  background: linear-gradient(to right, #d31027, #ea384d); }
-
 .introductie {
-  padding-bottom: 0; }
+  text-align: center;
+  padding-bottom: 0;
+  padding-top: 10vh; }
   .introductie .content-inner {
-    padding: 5vh 20px; }
+    padding: 5vh 35px;
+    opacity: 0;
+    animation: fadein 2.5s ease forwards; }
     .introductie .content-inner h1 {
       margin-bottom: 10px; }
+@keyframes fadein {
+  100% {
+    opacity: 1; } }
     .introductie .content-inner #slide-outer > div {
-      position: relative; }
-      .introductie .content-inner #slide-outer > div p:first-child {
+      height: 275px; }
+      .introductie .content-inner #slide-outer > div p {
+        background: none;
         box-shadow: none;
-        padding: 0 0 20px 0;
+        padding: 0 0 20px;
         border-radius: 0;
         height: auto; }
   .introductie .logo {
-    margin: 0 0 50px;
-    text-align: center; }
+    margin: 0 0 30px; }
     .introductie .logo img {
-      max-height: 100px; }
+      max-height: 150px; }
 
 .onzichtbaar {
   display: none; }
@@ -112,30 +119,15 @@ Welkomspagina
   display: block; }
 
 header {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  color: white;
-  padding: 15px 20px; }
-  header h1 {
-    margin: 0;
-    text-align: center; }
-
-#header-groen {
-  background: linear-gradient(to right, #00841A, #378B29); }
-
-#header-blauw {
-  background: linear-gradient(to left, #0083B0, #00B4DB); }
-
-#header-rood {
-  background: linear-gradient(to right, #d31027, #ea384d); }
+  padding: 15px 20px 0 20px; }
 
 footer {
+  background: #E9EBF1;
   z-index: 99;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 10vh;
-  bottom: 0;
   display: flex;
   align-items: center; }
   footer .footer-nav {
@@ -146,70 +138,52 @@ footer {
     align-items: center;
     margin: 0;
     padding: 0; }
-    footer .footer-nav li {
-      list-style-type: none; }
-      footer .footer-nav li div {
-        text-align: center; }
-      footer .footer-nav li p {
-        color: white; }
-  footer li:first-child {
-    margin-top: 5px; }
+    footer .footer-nav li div {
+      text-align: center; }
   footer img {
     max-height: 22px; }
-
-#footer-blauw {
-  background: linear-gradient(to right, #0083B0, #00B4DB); }
-
-#footer-groen {
-  background: linear-gradient(to right, #00841A, #378B29); }
-
-#footer-rood {
-  background: linear-gradient(to right, #d31027, #ea384d); }
 
 #active-tab-footer {
   margin-top: 5px; }
 
 #back-arrow {
-  max-height: 15px; }
+  max-height: 15px;
+  margin-bottom: 30px; }
 
 .content-inner {
   padding: 2.5vh 20px;
   border-radius: 20px; }
-  .content-inner p {
-    display: block; }
 
 .btn-bottom {
   padding: 0 20px;
-  width: 100%;
-  bottom: calc(10vh + 10px);
-  position: absolute; }
+  width: 100%; }
   .btn-bottom .btn-bottom-two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5px; }
-    .btn-bottom .btn-bottom-two-columns a {
-      text-decoration: none;
-      color: black; }
-    .btn-bottom .btn-bottom-two-columns .termen-btn {
-      border-radius: 20px;
-      padding: 20px 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-width: 1px;
-      border-style: solid;
-      text-align: center; }
-  .btn-bottom .termen-btn-full {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px 15px;
-    border-width: 1px;
-    border-style: solid;
+    grid-column-gap: 25px; }
+  .btn-bottom .termen-btn {
+    background: white;
     border-radius: 20px;
-    background-color: white;
-    margin-bottom: 5px; }
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+    box-shadow: 2px 9px 12px 1px rgba(0, 0, 0, 0.14); }
+    .btn-bottom .termen-btn h1 {
+      font-size: 2em;
+      position: relative; }
+    .btn-bottom .termen-btn h1:after {
+      content: "";
+      top: 60px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-size: cover;
+      width: 60px;
+      height: 2px; }
 
 /*
 Vorige/volgende knoppen
@@ -222,42 +196,46 @@ Vorige/volgende knoppen
   align-items: center;
   position: absolute;
   bottom: 0; }
+  .nextprev p {
+    font-size: 1.1em; }
   .nextprev .btn-next-prev {
+    color: white;
+    text-transform: uppercase;
     display: block;
     padding: 10px 14px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 1.1em;
     width: 100px;
     text-align: center;
-    background-color: white; }
+    border: none; }
 
 #btn-blue {
-  border: 1px solid #0083B0; }
+  background: #22a6b3; }
 
 #btn-red {
-  border: 1px solid #d31027; }
+  background: #eb4d4b; }
 
 #btn-green {
-  border: 1px solid #00841A; }
-
-#btn-start {
-  background-color: #d31027;
-  color: white; }
+  background: #6ab04c; }
 
 /*
 Vergrendelde blokken
 */
 .locked {
   pointer-events: none; }
-  .locked .termen-btn,
-  .locked .termen-btn-full {
+  .locked .termen-btn {
+    position: relative; }
+  .locked .termen-btn:after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
     background: url("../afbeeldingen/lock.png");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center center; }
-    .locked .termen-btn h2,
-    .locked .termen-btn-full h2 {
-      color: black; }
 
 .warning:before {
   content: "Doorloop eerst de stappen hierboven.";
@@ -294,7 +272,7 @@ Vergrendelde blokken
   background: white;
   border-radius: 20px;
   box-shadow: 2px 9px 12px 1px rgba(0, 0, 0, 0.14);
-  padding: 15px;
+  padding: 20px;
   height: calc(100% - 55px);
   overflow-y: scroll; }
 
@@ -315,9 +293,9 @@ Pagina tips
 Pagina termen-btn
 */
 .termen ul li:nth-child(even) {
-  background: white; }
+  background: #E9EBF1; }
 .termen ul li:nth-child(odd) {
-  background: rgba(0, 0, 0, 0.05); }
+  background: white; }
 .termen ul li {
   padding: 20px;
   display: grid;
@@ -346,53 +324,28 @@ Pagina termen-btn
 /*
 Pagina voeding
 */
-.voeding .btn-bottom a {
-  border-color: #378B29; }
+.voeding .btn-bottom .termen-btn h1:after {
+  background-color: #6ab04c; }
 
 /*
 Pagina basis
 */
-.basis .information-extra {
-  padding: 20px; }
 .basis .content-inner {
   padding: 0; }
   .basis .content-inner #slide-outer {
-    padding: 20px;
-    background: url("../afbeeldingen/test_home.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1; }
+    padding: 20px; }
     .basis .content-inner #slide-outer div p:first-child {
-      box-shadow: none;
+      box-shadow: 2px 9px 12px 1px rgba(0, 0, 0, 0.14);
       background: white;
-      border-radius: 10px;
-      border: 1px solid #0083B0; }
-  .basis .content-inner #slide-outer:after {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-size: cover;
-    z-index: -1; }
-.basis .btn-bottom {
-  padding: 20px;
-  background: white;
-  bottom: 10vh; }
-  .basis .btn-bottom a {
-    border-color: #0083B0; }
-
-.oefeningen .btn-bottom a {
-  border-color: #d31027; }
+      border-radius: 20px; }
+.basis .btn-bottom .termen-btn h1:after {
+  background-color: #22a6b3; }
 
 /*
 Pagina voedingsmiddelen
 */
 .voeding_extra .content-inner {
-  padding: 5px 0 0 0; }
+  padding: 5px 0 0; }
 .voeding_extra .collapse p {
   padding: 20px; }
 
@@ -452,6 +405,11 @@ Pagina voedingsmiddelen
 .voedingsmiddelen .content-inner {
   padding: 0; }
 
+.oefeningen .btn-bottom .termen-btn {
+  width: 50%; }
+.oefeningen .btn-bottom .termen-btn h1:after {
+  background-color: #eb4d4b; }
+
 /*
 Pagina oefeningen per spiergroep
 */
@@ -497,7 +455,7 @@ Pagina oefeningen per spiergroep
   width: 150px;
   text-align: center;
   display: block;
-  margin: 0 auto 20px auto; }
+  margin: 0 auto 20px; }
 
 /*
 Oefeningen detailpagina

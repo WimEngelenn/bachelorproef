@@ -1,0 +1,55 @@
+/*
+Welkomspagina
+*/
+ /* .welkom {
+ padding: 2.5vh 20px;
+ height: 100vh;
+ margin-bottom: 0;
+
+ .content {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+     border-radius: 20px;
+    padding: 0 50px;
+    border: 1px solid #d31027;
+    min-height: 95vh;
+
+   .logo {
+       margin: 0 0 50px;
+      text-align: center;
+
+     img {
+        max-height: 250px;
+      }
+     }
+
+     h1 {
+      text-align: center;
+    }
+   }
+ } */
+
+ /* #footer-blauw {
+   background: linear-gradient(to right, #0083B0, #00B4DB);
+ }
+
+ #footer-groen {
+   background: linear-gradient(to right, #00841A, #378B29);
+ }
+
+ #footer-rood {
+   background: linear-gradient(to right, #d31027, #ea384d);
+ } */
+
+ /* #header-groen {
+   background: linear-gradient(to right, #00841A, #378B29);
+ }
+
+ #header-blauw {
+   background: linear-gradient(to left, #0083B0, #00B4DB);
+ }
+
+ #header-rood {
+   background: linear-gradient(to right, #d31027, #ea384d);
+ } */
