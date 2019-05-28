@@ -53,7 +53,8 @@ h2 {
 
 h3 {
   font-size: 1.8em;
-  font-weight: 600; }
+  font-weight: 600;
+  line-height: 1.2em; }
 
 h4 {
   font-size: 1.5em;
@@ -89,7 +90,8 @@ Introductie pagina
 .introductie {
   text-align: center;
   padding-bottom: 0;
-  padding-top: 10vh; }
+  padding-top: 10vh;
+  margin-bottom: 0; }
   .introductie .content-inner {
     padding: 5vh 35px;
     opacity: 0;
@@ -293,16 +295,18 @@ Pagina tips
 Pagina termen-btn
 */
 .termen ul li:nth-child(even) {
-  background: #E9EBF1; }
-.termen ul li:nth-child(odd) {
   background: white; }
+.termen ul li:nth-child(odd) {
+  background: none; }
 .termen ul li {
   padding: 20px;
   display: grid;
-  grid-template-columns: 20% 70%;
-  grid-column-gap: 10%; }
+  grid-template-columns: 35% 60%;
+  grid-column-gap: 5%; }
   .termen ul li h3 {
-    padding-right: 20px; }
+    padding-right: 20px;
+    font-weight: 400;
+    color: #22a6b3; }
 .termen .content-inner {
   height: auto; }
 
@@ -344,6 +348,8 @@ Pagina basis
 /*
 Pagina voedingsmiddelen
 */
+.voeding_extra header {
+  margin-bottom: 20px; }
 .voeding_extra .content-inner {
   padding: 5px 0 0; }
 .voeding_extra .collapse p {
@@ -413,26 +419,32 @@ Pagina voedingsmiddelen
 /*
 Pagina oefeningen per spiergroep
 */
+.oefeningen-per-spiergroep .oefeningen-lijst a:nth-child(even) li {
+  background: none; }
+.oefeningen-per-spiergroep .oefeningen-lijst a:nth-child(odd) li {
+  background: white; }
 .oefeningen-per-spiergroep .oefeningen-lijst li {
   display: grid;
   grid-template-columns: 40% 40% 20%;
   align-items: center;
   padding: 20px; }
   .oefeningen-per-spiergroep .oefeningen-lijst li img {
-    max-height: 100px;
-    text-align: left; }
+    max-height: 100px; }
   .oefeningen-per-spiergroep .oefeningen-lijst li h3 {
     text-align: left; }
   .oefeningen-per-spiergroep .oefeningen-lijst li #forward-btn {
     max-height: 25px;
     justify-self: end; }
 
+.overzicht-oefeningen .oefeningen-lijst a:nth-child(even) li {
+  background: none; }
+.overzicht-oefeningen .oefeningen-lijst a:nth-child(odd) li {
+  background: white; }
 .overzicht-oefeningen .oefeningen-lijst li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
-  border-bottom: 2px solid #d31027; }
+  padding: 20px; }
   .overzicht-oefeningen .oefeningen-lijst li #forward-btn {
     max-height: 25px; }
   .overzicht-oefeningen .oefeningen-lijst li h3 {
@@ -460,6 +472,8 @@ Pagina oefeningen per spiergroep
 /*
 Oefeningen detailpagina
 */
+.oefening-detail header {
+  margin-bottom: 20px; }
 .oefening-detail .video-container {
   margin-bottom: 20px; }
 .oefening-detail .content-inner h3 {
@@ -469,23 +483,23 @@ Oefeningen detailpagina
   align-items: flex-end;
   margin-bottom: 30px; }
 .oefening-detail .content-inner .primaire-spier {
-  border: 1px solid #d31027;
   padding: 10px 14px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 1.1em;
   width: 100px;
   text-align: center;
-  background-color: white;
-  margin-right: 20px; }
+  background-color: #eb4d4b;
+  margin-right: 20px;
+  color: white; }
 .oefening-detail .content-inner .secundaire-spier {
-  border: 1px solid #d31027;
   padding: 8px 12px;
   border-radius: 10px;
   font-size: 1em;
   width: 80px;
   text-align: center;
-  background-color: white;
-  margin-right: 10px; }
+  background-color: #eb4d4b;
+  margin-right: 10px;
+  color: white; }
 .oefening-detail .content-inner ol {
   list-style-type: none;
   counter-reset: my-awesome-counter;
@@ -494,7 +508,6 @@ Oefeningen detailpagina
   .oefening-detail .content-inner ol li {
     padding: 15px 0;
     counter-increment: my-awesome-counter;
-    color: black;
     position: relative; }
   .oefening-detail .content-inner ol li::before {
     content: counter(my-awesome-counter);
@@ -504,7 +517,7 @@ Oefeningen detailpagina
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background: #d31027;
+    background: #eb4d4b;
     font-weight: bold;
     position: absolute;
     color: white;
@@ -534,14 +547,15 @@ Pagina informatie per spiergroep
   .pop-up .pop-up-inner {
     background-color: black;
     margin: 15% auto;
-    padding: 20px;
+    padding: 30px;
     width: 80%;
-    color: white;
     border-radius: 15px; }
     .pop-up .pop-up-inner h3 {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      color: white; }
     .pop-up .pop-up-inner p {
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      color: white; }
   .pop-up .close {
     color: white;
     float: right;
